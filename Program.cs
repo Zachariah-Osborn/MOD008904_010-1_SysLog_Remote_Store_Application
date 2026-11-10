@@ -19,6 +19,12 @@ namespace SysLog_Remote_Store_Application
                 return "Start";
             }
         }
+
+        static void TextColour(int colourSelector)
+        {
+
+        }
+
         static void Main(string[] args)
         {
             // MOD008904 010-1 SysLog Project Assignment
@@ -28,6 +34,7 @@ namespace SysLog_Remote_Store_Application
             bool programLoop = true;
             bool UDPActive = false;
             bool TCPActive = false;
+            
             List<string> UDPListener = new List<string>();
             List<string> TCPListener = new List<string>();
             IPAddress address;
@@ -40,6 +47,7 @@ namespace SysLog_Remote_Store_Application
                 // Error handling for incorrect inputs including anything outside the interger limit, incorrect format, Null inputs, and etc.
                 try
                 {
+                    
                     Console.Write($"==============================================" +
                         $"\n\tSYSLOG SERVER REMOTE STORE APP" +
                         $"\n==============================================" +
